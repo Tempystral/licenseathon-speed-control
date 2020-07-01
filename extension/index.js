@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (nodecg) {
+module.exports = function (nodecg) { // exports an anonymous function and ONLY that to the requiring module (nodecg)
 	nodecg.log.info('Hello, from your bundle\'s extension!');
 	nodecg.log.info('I\'m where you put all your server-side code.');
 	nodecg.log.info(`To edit me, open "${__filename}" in your favorite text editor or IDE.`);

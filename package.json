@@ -1,29 +1,33 @@
 {
   "name": "licenseathon-speed-control",
-  "version": "0.0.0",
-  "description": "",
-  "homepage": "",
-  "author": {
-    "name": "tempystral",
-    "email": "",
-    "url": ""
+  "version": "1.0.0",
+  "description": "A nodecg package for Licenseathon 2020 using Speedcontrol",
+  "homepage": "licenseathon.live",
+  "author": "tempystral",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tempystral/licenseathon-speed-control.git"
   },
+  "license": "MIT",
+  "keywords": [
+    "",
+    "nodecg-bundle"
+  ],
   "files": [
     "dashboard",
     "graphics",
     "extension.js",
     "extension"
   ],
-  "keywords": [
-    "",
-    "nodecg-bundle"
-  ],
   "nodecg": {
-    "compatibleRange": "^1.1.1",
+    "compatibleRange": "^1.5.0",
+    "bundleDependencies": {
+      "nodecg-speedcontrol": "^2.0.0"
+    },
     "dashboardPanels": [
       {
-        "name": "panel",
-        "title": "Panel",
+        "name": "licenseathonPanel",
+        "title": "Licenseathon Panel",
         "width": 3,
         "file": "panel.html",
         "headerColor": "#525F78"
@@ -36,7 +40,5 @@
         "height": 720
       }
     ]
-  },
-  "repository": "https://github.com/nodecg/nodecg.git",
-  "license": "MIT"
+  }
 }
