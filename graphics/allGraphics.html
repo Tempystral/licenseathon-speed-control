@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<!-- CSS -->
+		<link href="css/common.css" rel="stylesheet"/>
+		
+		<!-- JavaScript -->
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="js/run-info.js"></script>
+		<script src="js/donation-total.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/stream-loader.js"></script>
+	</head>
+	<body>
+		<div id="run-info-section">
+      <span class="textElement" id="gameTitle"></span>
+      <span class="textElement" id="gameCategory"></span>
+      <span class="textElement" id="gameSystem"></span>
+      <span class="textElement" id="gameEstimate"></span>
+    </div>
+    <div id="player-info-section">
+      <span class="textElement" id="player"></span>
+      <span class="textElement" id="twitch"></span>
+    </div>
+    <div id="timer-section">
+      <span class="textElement" id="timer"></span>
+    </div>
+    <div id="run-window-section">
+      <div id="player1">
+        <iframe name="streamWindow" id="player1Window" src="localhost"></iframe>
+      </div>
+    </div>
+	</body>
+</html>
