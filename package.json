@@ -38,6 +38,16 @@
         "file": "index.html",
         "width": 1280,
         "height": 720
+      },
+      {
+        "file": "allGraphics.html",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "file": "overlay_4-3.html",
+        "width": 1280,
+        "height": 720
       }
     ]
   }

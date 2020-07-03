@@ -36,6 +36,7 @@ html, body {
 	flex-direction: column;
 	align-items: center; /* Aligns vertically centre. */
 	justify-content: center; /* Aligns horizontally centre. */
+	background-color: blueviolet;
 }
 
 #player-info-section {
@@ -44,6 +45,7 @@ html, body {
 	flex-direction: column;
 	align-items: center; /* Aligns vertically centre. */
 	justify-content: center; /* Aligns horizontally centre. */
+	background-color: coral;
 }
 
 #timer-section {
@@ -52,18 +54,20 @@ html, body {
 	display: flex;
 	align-items: center; /* Aligns vertically centre. */
 	justify-content: center; /* Aligns horizontally centre. */
+	background-color: crimson;
 }
 
 #run-window-section {
 	width: 100%;
 	display: flex;
+	background-color: darkgreen;
 }
 
 .textElement {
 	padding: 10px 5px 10px 5px;
 }
 
-#player1 {
+/*#player1 {
 	width: 100vw;
 	height: 56.25vw;
 	background-color: pink;
@@ -72,4 +76,4 @@ html, body {
 	margin: auto;
 	position: absolute;
 	top: 0; bottom: 0; left: 0; right: 0;
-}
+}*/

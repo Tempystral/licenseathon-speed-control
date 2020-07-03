@@ -1,0 +1,42 @@
+body {
+  --transparent-dark-grey: rgba(50, 50, 50, 0.8);
+  background-color: white;
+  background-image: url("../img/bg_blue.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 720px;
+  width: 1280px;
+}
+
+#content {
+  height: 100%;
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: max-content;
+}
+
+#info-column {
+  max-width: 20%;
+  object-fit: scale-down;
+}
+
+.panel {
+  padding: 5px;
+  margin: 0px;
+  background-color: var(--transparent-dark-grey);
+  border-width: 5px;
+  border-color: var(--transparent-dark-grey);
+  object-fit: scale-down;
+}
+
+/* #game-window {
+  height: 100%;
+} */
