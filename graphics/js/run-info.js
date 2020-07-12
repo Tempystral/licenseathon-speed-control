@@ -8,8 +8,6 @@ $(() => {
 	var gameCategory = $('#gameCategory');
 	var gameSystem = $('#gameSystem'); 
 	var gameEstimate = $('#gameEstimate');
-	//var player = $('#player');
-	//var twitch = $('#twitch'); -- Moved to player-info.js
 	
 	// This is where the information is received for the run we want to display.
 	// The "change" event is triggered when the current run is changed.
@@ -35,8 +33,6 @@ $(() => {
 		gameCategory.html(runData.category);
 		gameSystem.html(runData.system);
 		gameEstimate.html(runData.estimate);
-		//$("#gameCategory").fitText();//(0.25, { minFontSize: minSize, maxFontSize: maxSize });
-		//$("#gameEstimate").fitText(0.25, { minFontSize: minSize, maxFontSize: maxSize });
 		gameTitle.fitText();
 		gameCategory.fitText(1.25);
 	}
