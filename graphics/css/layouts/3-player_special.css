@@ -3,7 +3,7 @@
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	background-image: url('../../img/layouts/16-9\ 2p\ race.png');
+	background-image: url('../../img/layouts/4-3\ triple.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 1920px;
@@ -17,17 +17,25 @@
 
 .playerContainer[player-id="1"] {
 	position: absolute;
-	left: 32px;
-	top: 698px;
-	width: 430px;
+	left: 12px;
+	top: 637px;
+	width: 380px;
 	height: 120px;
 }
 
 .playerContainer[player-id="2"] {
 	position: absolute;
-	left: 1458px;
-	top: 698px;
-	width: 430px;
+	left: 650px;
+	top: 637px;
+	width: 380px;
+	height: 120px;
+}
+
+.playerContainer[player-id="3"] {
+	position: absolute;
+	left: 1288px;
+	top: 637px;
+	width: 380px;
 	height: 120px;
 }
 
@@ -57,21 +65,30 @@
 /* Timer stuff. */
 .timerContainer[timer-id="1"] {
 	position: absolute;
-	left: 500px;
-	top: 698px;
-	width: 430px;
+	left: 410px;
+	top: 637px;
+	width: 222px;
 	height: 80px;
 }
 
 .timerContainer[timer-id="2"] {
 	position: absolute;
-	left: 990px;
-	top: 698px;
-	width: 430px;
+	left: 1048px;
+	top: 637px;
+	width: 222px;
 	height: 80px;
 }
 
-/* .timer {
-	font-size: 54px;
-	-webkit-text-stroke: 2px black;
-} */
+.timerContainer[timer-id="3"] {
+	position: absolute;
+	left: 1686px;
+	top: 637px;
+	width: 222px;
+	height: 80px;
+}
+
+.timerContainer .timer {
+	font-size: 64px;
+	width: 100%;
+	text-align: center;
+}
