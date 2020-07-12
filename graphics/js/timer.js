@@ -6,6 +6,7 @@ $(() => {
 	// This is where the timer information is received.
 	// The "change" event is triggered whenever the time changes or the state changes.
 	var timer = nodecg.Replicant('timer', speedcontrolBundle);
+	var runDataActiveRun = nodecg.Replicant('runDataActiveRun', speedcontrolBundle);
 	timer.on('change', (newVal, oldVal) => {
 		if (newVal)
 			updateTimer(newVal, oldVal);
@@ -21,13 +22,22 @@ $(() => {
 		$(`.timerContainer .timer`).html(newVal.time);
 
 		const finishTimes = newVal.teamFinishTimes;
+		const teams = runDataActiveRun.value.teams;
+		// If any team is finished...
 		if (Object.keys(finishTimes).length) {
 			for (let id in finishTimes) {
-				id = Number(id);
-
+				// Find the index of the finished team's ID
+				const index = teams.findIndex(x => x.id == id);
 				const time = finishTimes[id].time;
-				$(`.timerContainer[timer-id=${id + 1}] .timer`).html(time).toggleClass('timer_stopped timer_running timer_paused', false).toggleClass('timer_finished', true);
+				// Remove all other decoration classes from the affected timer and apply the timer_finished class
+				$(`.timerContainer[timer-id=${index + 1}] .timer`).html(time).toggleClass('timer_stopped timer_running timer_paused', false).toggleClass('timer_finished', true);
+			}
+		}
+		// Cleanup - finds IDs not in the list of finished teams and removes the timer_finished class
+		for (let i = 0; i < teams.length; i++){
+			if (!(teams[i].id in timer.value.teamFinishTimes)) {
+				$(`.timerContainer[timer-id=${i + 1}] .timer`).toggleClass('timer_finished', false);
 			}
 		}
 	}
-});
+})
