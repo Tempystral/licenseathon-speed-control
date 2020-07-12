@@ -1,0 +1,77 @@
+#backgroundImage {
+	position: fixed;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background-image: url('../../img/layouts/4-3\ 2p\ race.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1920px;
+	height: 1080px;
+}
+
+/* Player information stuff. */
+.playerContainer .nameContainer {
+	font-size: 48px;
+}
+
+.playerContainer[player-id="1"] {
+	position: absolute;
+	left: 32px;
+	top: 731px;
+	width: 430px;
+	height: 120px;
+}
+
+.playerContainer[player-id="2"] {
+	position: absolute;
+	left: 1458px;
+	top: 731px;
+	width: 430px;
+	height: 120px;
+}
+
+/* Run information stuff. */
+#runInfoContainer {
+	position: absolute;
+	left: 745px;
+	top: 833px;
+	width: 430px;
+	height: 215px;
+}
+
+#gameTitle {
+	width: 100%;
+}
+
+#categoryContainer {
+	font-size: 30px;
+	width: 100%;
+}
+
+#estimateContainer {
+	font-size: 24px;
+	/* width: 50%; */
+}
+
+/* Timer stuff. */
+.timerContainer[timer-id="1"] {
+	position: absolute;
+	left: 500px;
+	top: 731px;
+	width: 430px;
+	height: 80px;
+}
+
+.timerContainer[timer-id="2"] {
+	position: absolute;
+	left: 990px;
+	top: 731px;
+	width: 430px;
+	height: 80px;
+}
+
+/* .timer {
+	font-size: 54px;
+	-webkit-text-stroke: 2px black;
+} */

@@ -1,0 +1,106 @@
+#backgroundImage {
+	position: fixed;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background-image: url('../../images/layouts/4p_16-9.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1920px;
+	height: 1080px;
+}
+
+/* Player information stuff. */
+.playerContainer .nameContainer {
+	position: relative;
+	left: 43px;
+	width: calc(276px - 43px);
+	height: 43px;
+	font-size: 24px;
+}
+
+.playerContainer img {
+	position: absolute;
+	width: 43px;
+	height: 43px;
+	opacity: 0;
+}
+
+.playerContainer[player-id="1"] {
+	position: absolute;
+	left: 22px;
+	top: 490px;
+	width: 276px;
+	height: 43px;
+}
+
+.playerContainer[player-id="2"] {
+	position: absolute;
+	left: 1623px;
+	top: 490px;
+	width: 276px;
+	height: 43px;
+}
+
+.playerContainer[player-id="3"] {
+	position: absolute;
+	left: 22px;
+	top: 547px;
+	width: 276px;
+	height: 43px;
+}
+
+.playerContainer[player-id="4"] {
+	position: absolute;
+	left: 1623px;
+	top: 547px;
+	width: 276px;
+	height: 43px;
+}
+
+/* Timer stuff. */
+.timerContainer[timer-id="1"] {
+	position: absolute;
+	left: 686px;
+	top: 490px;
+	width: 161px;
+	height: 43px;
+}
+
+.timerContainer[timer-id="2"] {
+	position: absolute;
+	left: 1076px;
+	top: 490px;
+	width: 161px;
+	height: 43px;
+}
+
+.timerContainer[timer-id="3"] {
+	position: absolute;
+	left: 686px;
+	top: 547px;
+	width: 161px;
+	height: 43px;
+}
+
+.timerContainer[timer-id="4"] {
+	position: absolute;
+	left: 1076px;
+	top: 547px;
+	width: 161px;
+	height: 43px;
+}
+
+.timer {
+	font-size: 36px;
+	-webkit-text-stroke: 1.5px black;
+}
+
+/* Donation container */
+.donationTotal {
+	position: absolute;
+	left: 872px;
+	top: 513px;
+	width: 180px;
+	height: 57px;
+}

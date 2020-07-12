@@ -1,79 +1,145 @@
-html, body {
+/* Custom Fonts */
+@font-face {
+	font-family: 'Agency FB';
+	src: url('../fonts/agency-fb.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Agency FB Bold';
+	src: url('../fonts/agency-fb-bold.ttf') format('truetype');
+}
+
+/* Custom Colours */
+:root {
+	--RichBlack: #050505;
+	--Blue: #3F88C5;
+	--LightBlue: #97BDDA;
+	--LightGrey: #EEF1EF;
+	--Orange: #F18F01;
+	--Red: #A4243B;
+}
+
+html,
+body {
 	/* Removes the page's margin/padding and makes it fill the whole browser. */
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	
+	overflow: hidden;
+
 	/* Turns the whole page into a flex box, so we can position the text horizontally/vertically. */
 	display: flex;
-	flex-wrap: wrap;
 	/* Options for settings below: flex-start (top/left), center, flex-end (bottom/right). */
-	align-items: center; /* Aligns vertically centre. */
-	justify-content: center; /* Aligns horizontally centre. */
-	
+	align-items: center;
+	/* Aligns vertically centre. */
+	justify-content: center;
+	/* Aligns horizontally centre. */
+
 	/* Change the default text font, size and colour. */
-	font-family: 'Arial';
-	color: black;
+	font-family: 'Agency FB';
+	color: white;
 	font-size: 20px;
 }
 
-/* Adds text before/after the estimate to improve the look. */
-/* You could also use this idea with things that aren't the estimate. */
-#gameEstimate:before {content: 'EST: ';} /* A label to explain what the numbers actually are. */
+/* BACKGROUND IMAGE IS REMOVED, ADD IT IN OBS! */
+/* Background image; settings can also be used for the foreground image. */
+.backgroundImage {
+	position: fixed;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background-image: url('../images/background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1920px;
+	height: 1080px;
+}
+
+/* Basic flex container class which auto centres it's contents. */
+.flexContainer {
+	display: flex;
+	align-items: center;
+	/* Aligns vertically centre. */
+	justify-content: center;
+	/* Aligns horizontally centre. */
+}
+
+/* Image classes for logos. */
+.playerContainer {
+	color: var(--LightGrey);
+	text-shadow: 3px 3px var(--RichBlack);
+}
+
+/* Space between player logo on left and player name text. */
+.playerLogo {
+	padding-right: 17px;
+}
+
+.nameContainer {
+	text-align: center;
+	margin-inline-start: .5em;
+	margin-inline-end: .5em;
+}
+
+#runInfoContainer,
+#timerInfoContainer{
+	flex-direction: column;
+	text-shadow: 3px 3px var(--RichBlack);
+	text-align: center;
+	font-size: 48px;
+}
+
+#runInfoContainer .flexContainer {
+	margin-block-start: .25rem;
+	margin-block-end: .25rem;
+}
+
+/* Text properties for game info */
+#gameTitle {
+	/* text-align: center; */
+	font-family: "Agency FB Bold";
+	font-size: 48px;
+	color: var(--Orange);
+	
+}
+#gameEstimate {
+	/* text-align: center; */
+	font-family: "Agency FB Bold";
+	font-size: 36px;
+	/* letter-spacing: 1px; */
+	color: var(--LightGrey);
+	
+}
+#gameEstimate:before { content: "Estimate: "; }
 
 /* Different colours for each state the timer can be in. */
-/* The state is set by JavaScript in timer.js. */
-.timer_running {color: black;}
-.timer_stopped {color: gray;}
-.timer_paused {color: gray;}
-.timer_finished {color: green;}
-#timer {font-size: 28px;}
-
-#run-info-section {
-	width: 50%;
-	display: flex;
-	flex-direction: column;
-	align-items: center; /* Aligns vertically centre. */
-	justify-content: center; /* Aligns horizontally centre. */
-	background-color: blueviolet;
+.timer {
+	font-family: 'Agency FB';
+	text-shadow: 3px 3px var(--RichBlack);
+}
+.timerContainer .timer  {
+	font-size: 96px;
+	letter-spacing: -2px;
 }
 
-#player-info-section {
-	width: 50%;
-	display: flex;
-	flex-direction: column;
-	align-items: center; /* Aligns vertically centre. */
-	justify-content: center; /* Aligns horizontally centre. */
-	background-color: coral;
+.timer_running {
+	color: var(--Orange);
 }
 
-#timer-section {
-	width: 100%;
-	min-height: 200px;
-	display: flex;
-	align-items: center; /* Aligns vertically centre. */
-	justify-content: center; /* Aligns horizontally centre. */
-	background-color: crimson;
+.timer_paused,
+.timer_stopped {
+	color: var(--Orange);
 }
 
-#run-window-section {
-	width: 100%;
-	display: flex;
-	background-color: darkgreen;
+.timer_finished {
+	color: #3F88C5;
 }
 
-.textElement {
-	padding: 10px 5px 10px 5px;
+/* Donation container */
+.donationTotal {
+	margin-top: 2px;
+	font-size: 28px;
+	color: white;
+	-webkit-text-stroke: 2px black;
 }
-
-/*#player1 {
-	width: 100vw;
-	height: 56.25vw;
-	background-color: pink;
-	max-height: 100vh;
-	max-width: 177.78vh;
-	margin: auto;
-	position: absolute;
-	top: 0; bottom: 0; left: 0; right: 0;
-}*/

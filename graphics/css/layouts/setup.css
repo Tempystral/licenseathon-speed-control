@@ -1,0 +1,69 @@
+#backgroundImage {
+	position: fixed;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background-image: url('../../images/setup/background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1920px;
+	height: 1080px;
+}
+
+#overlayImage {
+	position: fixed;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background-image: url('../../images/setup/overlay.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1920px;
+	height: 1080px;
+
+	animation: moveOverlay 6s ease-in-out 0s infinite alternate;
+}
+
+@keyframes moveOverlay {
+	from {
+		transform: translateY(-20px);
+	}
+
+	to {
+		transform: translateY(20px);
+	}
+}
+
+#jokeContainer {
+	position: absolute;
+	left: 38vw;
+	bottom: 300px;
+	width: 600px;
+	height: 80px;
+
+	text-align: center;
+	color: white;
+	font-size: 42px;
+	letter-spacing: -2px;
+	-webkit-text-stroke: 2px black;
+
+	animation: rotateJoke 12s ease-in-out 0s infinite alternate;
+}
+
+@keyframes rotateJoke {
+	0% {
+		transform: rotateZ(-1deg) scale(0.975);
+	}
+	25% {
+		transform: rotateZ(0deg) scale(1.025);
+	}
+	50% {
+		transform: rotateZ(1deg) scale(0.975);
+	}
+	75% {
+		transform: rotateZ(0deg) scale(1.025);
+	}
+	100% {
+		transform: rotateZ(-1deg) scale(0.975);
+	}
+}

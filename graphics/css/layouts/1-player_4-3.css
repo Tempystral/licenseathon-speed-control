@@ -1,0 +1,60 @@
+#backgroundImage {
+	position: fixed;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background-image: url('../../img/layouts/4-3\ single.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1920px;
+	height: 1080px;
+}
+
+/* Player information stuff. */
+.playerContainer .nameContainer {
+	font-size: 48px;
+}
+
+.playerContainer[player-id="1"] {
+	position: absolute;
+	left: 32px;
+	top: 168px;
+	width: 430px;
+	height: 215px;
+}
+
+/* Run information stuff. */
+#runInfoContainer {
+	position: absolute;
+	left: 32px;
+	top: 598px;
+	width: 430px;
+	height: 215px;
+}
+
+#gameTitle {
+	width: 100%;
+}
+
+#categoryContainer {
+	font-size: 30px;
+	width: 100%;
+}
+
+#estimateContainer {
+	font-size: 24px;
+	/* width: 50%; */
+}
+
+/* Timer stuff. */
+#timerInfoContainer {
+	flex-direction: column;
+	position: absolute;
+	left: 32px;
+	top: 383px;
+	width: 430px;
+	height: 215px;
+}
+.timerContainer[timer-id="1"] {
+	font-size: 72px;
+}

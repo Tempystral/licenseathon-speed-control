@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-sceneid="1p">
+<head>
+		<meta charset="UTF-8">
+		<title>Licenseathon (1p 16:9)</title>
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/layouts/1-player_16-9.css">
+
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<!-- <script src="../bower_components/jquery-fittext/jquery.fittext.js"></script> -->
+		<script src="js/fittext.js"></script>
+		<script src="js/animation.js"></script>
+		<script src="js/run-info.js"></script>
+		<script src="js/player-info.js"></script>
+		<script src="js/timer.js"></script>
+		
+		<script src="https://kit.fontawesome.com/2c8660a4ac.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<!-- Background image -->
+	<div id="backgroundImage"></div>
+		
+	<!-- Player 1 information -->
+	<div player-id="1" class="playerContainer flexContainer">
+		<div class="nameContainer flexContainer">
+			<div class="playerText"><!-- Player Name --></div>
+		</div>
+	</div>
+	
+	<!-- Timer -->
+	<div id="timerInfoContainer" class="flexContainer">
+		<div timer-id="1" class="timerContainer flexContainer">
+			<div class="timer"><!-- Timer --></div>
+		</div>
+		<div id="estimateContainer" class="flexContainer">
+			<div id="gameEstimate" class="timer"><!-- Game Estimate --></div>
+		</div>
+	</div>
+	
+	<!-- Run information -->
+	<div id="runInfoContainer" class="flexContainer">
+		<div id="gameTitle" class="flexContainer"><!-- Game Name --></div>
+		<div id="categoryContainer" class="flexContainer">
+			<div id="gameCategory"><!-- Game Category --></div>
+		</div>
+	</div>
+	
+</body>
+</html>

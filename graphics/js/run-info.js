@@ -3,13 +3,13 @@ $(() => {
 	// The bundle name where all the run information is pulled from.
 	var speedcontrolBundle = 'nodecg-speedcontrol';
 	
-	// JQuery selectors.							// Contained in...
-	var gameTitle = $('#gameTitle'); // game-title.html
-	var gameCategory = $('#gameCategory'); // game-category.html
-	var gameSystem = $('#gameSystem'); // game-system.html
-	var gameEstimate = $('#gameEstimate'); // game-estimate.html
-	var player = $('#player'); // player.html
-	var twitch = $('#twitch'); // twitch.html
+	// JQuery selectors
+	var gameTitle = $('#gameTitle');
+	var gameCategory = $('#gameCategory');
+	var gameSystem = $('#gameSystem'); 
+	var gameEstimate = $('#gameEstimate');
+	//var player = $('#player');
+	//var twitch = $('#twitch'); -- Moved to player-info.js
 	
 	// This is where the information is received for the run we want to display.
 	// The "change" event is triggered when the current run is changed.
@@ -21,26 +21,31 @@ $(() => {
 	
 	// Sets information on the pages for the run.
 	function updateSceneFields(runData) {
-		gameTitle.html(runData.game); // game-title.html
-		gameCategory.html(runData.category); // game-category.html
-		gameSystem.html(runData.system); // game-system.html
-		gameEstimate.html(runData.estimate); // game-estimate.html
-		
-		// Checks if we are on the player.html/twitch.html page.
-		// This is done by checking if the #player/#twitch span exists.
-		if (player.length || twitch.length) {
-			// Open the webpage with a hash parameter on the end to choose the team.
-			// eg: http://localhost:9090/bundles/speedcontrol-simpletext/graphics/player.html#2
-			// If this can't be found, defaults to 1.
-			var playerNumber = parseInt(window.location.hash.replace('#', '')) || 1;
-			
-			// Arrays start from 0 and not 1, so have to adjust for that.
-			var team = runData.teams[playerNumber-1];
-			
-			// speedcontrol has the ability to have multiple players in a team,
-			// but for here we'll just return the 1st one.
-			player.html(team.players[0].name); // player.html
-			twitch.html(team.players[0].social.twitch); // twitch.html
+		let title = `${runData.game}`;
+		let minSize = "20px";
+		let maxSize = "36px";
+		let fontSize = 20;
+		if (gameTitle.height() > 57) {
+			fontSize += Math.min((gameTitle.height() - 57) / 67 * 6, 6);
 		}
+		gameTitle.css('font-size', `${fontSize}px`);
+		
+		gameTitle.html(runData.game);
+
+		gameCategory.html(runData.category);
+		gameSystem.html(runData.system);
+		gameEstimate.html(runData.estimate);
+		//$("#gameCategory").fitText();//(0.25, { minFontSize: minSize, maxFontSize: maxSize });
+		//$("#gameEstimate").fitText(0.25, { minFontSize: minSize, maxFontSize: maxSize });
+		gameTitle.fitText();
+		gameCategory.fitText(1.25);
 	}
 });
+
+var flexFont = function () {
+	var divs = document.getElementsByClassName("flexFont");
+	for(var i = 0; i < divs.length; i++) {
+			var relFontsize = divs[i].offsetWidth*0.05;
+			divs[i].style.fontSize = relFontsize+'px';
+	}
+};

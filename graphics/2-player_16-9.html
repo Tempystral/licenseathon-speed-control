@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html data-sceneid="1p">
+	<head>
+		<meta charset="UTF-8">
+		
+		<!-- CSS -->
+		<link href="css/common.css" rel="stylesheet"/>
+		<link href="css/layouts/2p_16-9.css" rel="stylesheet"/>
+		
+		<!-- JavaScript -->
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="../bower_components/letteringjs/jquery.lettering.js"></script>
+		<script src="js/animation.js"></script>
+		<script src="js/donation.js"></script>
+		<script src="js/games/run-info.js"></script>
+		<script src="js/games/player-info.js"></script>
+		<script src="js/games/timer.js"></script>
+	</head>
+	<body>
+		<!-- Background image -->
+		<div id="backgroundImage"></div>
+		
+		<!-- Player 1 information -->
+		<div player-id="1" class="playerContainer">
+			<img class="twitchLogo" src="images/twitch_logo.png">
+			<img class="nameLogo" src="images/name_logo.png">
+
+			<div class="nameContainer flexContainer">
+				<div class="playerText"><!-- Player Name --></div>
+			</div>
+		</div>
+
+		<!-- Player 2 information -->
+		<div player-id="2" class="playerContainer">
+			<img class="twitchLogo" src="images/twitch_logo.png">
+			<img class="nameLogo" src="images/name_logo.png">
+
+			<div class="nameContainer flexContainer">
+				<div class="playerText"><!-- Player Name --></div>
+			</div>
+		</div>
+
+		<!-- Run information -->
+		<div id="gameTitle" class="flexContainer"><!-- Game Name --></div>
+		<div id="estimateContainer" class="flexContainer">
+			<div id="gameEstimate" class="timer"><!-- Game Estimate --></div>
+		</div>
+		
+		<!-- Timer -->
+		<div timer-id="1" class="timerContainer flexContainer">
+			<div class="timer"><!-- Timer --></div>
+		</div>
+		<div timer-id="2" class="timerContainer flexContainer">
+			<div class="timer"><!-- Timer --></div>
+		</div>
+	</body>
+</html>

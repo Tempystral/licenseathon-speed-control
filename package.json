@@ -14,40 +14,45 @@
     "nodecg-bundle"
   ],
   "files": [
-    "dashboard",
-    "graphics",
-    "extension.js",
-    "extension"
+    "graphics"
   ],
   "nodecg": {
     "compatibleRange": "^1.5.0",
     "bundleDependencies": {
       "nodecg-speedcontrol": "^2.0.0"
     },
-    "dashboardPanels": [
-      {
-        "name": "licenseathonPanel",
-        "title": "Licenseathon Panel",
-        "width": 3,
-        "file": "panel.html",
-        "headerColor": "#525F78"
-      }
-    ],
     "graphics": [
       {
-        "file": "index.html",
-        "width": 1280,
-        "height": 720
+        "file": "1-player_4-3.html",
+        "width": 1920,
+        "height": 1080
       },
       {
-        "file": "allGraphics.html",
-        "width": 1280,
-        "height": 720
+        "file": "1-player_16-9.html",
+        "width": 1920,
+        "height": 1080
       },
       {
-        "file": "overlay_4-3.html",
-        "width": 1280,
-        "height": 720
+        "file": "1-player_3-2.html",
+        "width": 1920,
+        "height": 1080
+      },
+      
+      {
+        "file": "2-player_4-3.html",
+        "width": 1920,
+        "height": 1080
+      },
+      
+      {
+        "file": "2-player_16-9.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "3-player_special.html",
+        "width": 1920,
+        "height": 1080
       }
     ]
   }
