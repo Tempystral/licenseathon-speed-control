@@ -1,9 +1,19 @@
+/* Custom Colours */
+:root {
+	--RichBlack: #050505;
+	--Blue: #3F88C5;
+	--LightBlue: #97BDDA;
+	--LightGrey: #EEF1EF;
+	--Orange: #F18F01;
+	--Red: #A4243B;
+}
+
 #backgroundImage {
 	position: fixed;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	background-image: url('../../images/setup/background.png');
+	background-image: url('../../img/layouts/background.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 1920px;
@@ -15,11 +25,11 @@
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	background-image: url('../../images/setup/overlay.png');
+	/* background-image: url('../../img/license.png'); */
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 1920px;
-	height: 1080px;
+	width: 860px;
+	height: 480px;
 
 	animation: moveOverlay 6s ease-in-out 0s infinite alternate;
 }
@@ -66,4 +76,135 @@
 	100% {
 		transform: rotateZ(-1deg) scale(0.975);
 	}
+}
+
+#license {
+	position: fixed;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background-image: url('../../img/license.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1290px;
+	height: 720px;
+	/* animation: moveOverlay 6s ease-in-out 0s infinite alternate; */
+}
+
+#runnerImage {
+	position: absolute;
+	left: 30px;
+	top: 197px;
+	width: 384px;
+	height: 492px;
+	/* background-color: black;
+	background-image: url("https://static-cdn.jtvnw.net/jtv_user_pictures/3f7296f1-2606-472f-9ded-80c8f9f76652-profile_image-300x300.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; */
+}
+
+#runnerInfoContainer {
+	position: absolute;
+	left: 444px;
+	top: 283px;
+	width: 750px;
+	height: 294px;
+	flex-direction: column;
+	/* background: pink; */
+}
+
+#estimateContainer {
+	position: absolute;
+	left: 444px;
+	top: 606px;
+	width: 750px;
+	height: 99px;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	/* background: pink; */
+}
+
+#license .playerText,
+#license #gameTitle,
+#license #gameCategory,
+#license #gameEstimate {
+	color: var(--RichBlack);
+	text-shadow: none;
+}
+
+#license .playerText {
+	width: 100%;
+	font-size: 36px;
+}
+
+#license #gameTitle {
+	font-size: 36px;
+}
+
+#license #gameCategory {
+	font-size: 24px;
+}
+
+/* ~~~~~~~~ ~~~~~~~~ ~~~~~~~~ ~~~~~~~~ */
+
+#license {
+	position: fixed;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background-image: url('../../img/license.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1290px;
+	height: 720px;
+	/* animation: moveOverlay 6s ease-in-out 0s infinite alternate; */
+}
+
+#runnerImage {
+	position: absolute;
+	left: 128px;
+	top: 223px;
+	width: 323px;
+	height: 414px;
+	background-color: black;
+	background-image: url("https://static-cdn.jtvnw.net/jtv_user_pictures/3f7296f1-2606-472f-9ded-80c8f9f76652-profile_image-300x300.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+#runnerInfoContainer {
+	position: absolute;
+	left: 476px;
+	top: 295px;
+	width: 550px;
+	height: 247px;
+	flex-direction: column;
+	/* background: pink; */
+}
+
+#estimateContainer {
+	position: absolute;
+	left: 476px;
+	top: 566px;
+	width: 550px;
+	height: 83px;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	/* background: pink; */
+}
+
+#upNext {
+	position: fixed;
+	flex-direction: column;
+	bottom: 20px;
+	font-size: 72px;
+	color: blue;
+}
+
+#upNext img {
+	height: 2em;
 }

@@ -53,6 +53,11 @@
         "file": "3-player_special.html",
         "width": 1920,
         "height": 1080
+      },
+      {
+        "file": "setup.html",
+        "width": 1920,
+        "height": 1080
       }
     ]
   }

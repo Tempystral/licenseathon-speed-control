@@ -9,10 +9,12 @@
 		
 		<!-- JavaScript -->
 		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
-		<script src="../bower_components/letteringjs/jquery.lettering.js"></script>
+		<!-- <script src="../bower_components/letteringjs/jquery.lettering.js"></script> -->
+		<script src="js/fittext.js"></script>
 		<script src="js/animation.js"></script>
-		<script src="js/donation.js"></script>
-		<script src="js/lib/typed.js"></script>
+		<script src="js/setup-info.js"></script>
+		<!-- <script src="js/player-info.js"></script> -->
+		<script src="js/timer.js"></script>
 	</head>
 	<body>
 		<!-- Background image -->
@@ -23,7 +25,32 @@
 
 		<!-- Joke container -->
 		<div id="jokeContainer"></div>
+		
+		<div id="license">
+			<div id="runnerImage" class="flexContainer"></div>
+			<div id="runnerInfoContainer" class="flexContainer">
+				<div player-id="1" class="playerContainer flexContainer">
+					<div class="nameContainer flexContainer">
+						<div class="playerText"><!-- Player Name --></div>
+					</div>
+				</div>
+				<div id="runInfoContainer">
+					<div id="gameTitle" class="flexContainer"></div>
+					<div id="categoryContainer" class="flexContainer">
+						<div id="gameCategory"><!-- Game Category --></div>
+					</div>
+				</div>
+			</div>
+			<div id="estimateContainer">
+				<div id="gameEstimate" class="timer"><!-- Game Estimate --></div>
+			</div>
+		</div>
 
-		<script src="js/typing.js"></script>
+		<div id="upNext" class="flexContainer">
+			<div>Up next on</div>
+			<img src="img/logo-wide.png">
+		</div>
+
+		<!-- <script src="js/typing.js"></script> -->
 	</body>
 </html>
