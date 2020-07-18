@@ -136,15 +136,15 @@
 
 #license .playerText {
 	width: 100%;
-	font-size: 36px;
+	font-size: 42px;
 }
 
 #license #gameTitle {
-	font-size: 36px;
+	font-size: 42px;
 }
 
 #license #gameCategory {
-	font-size: 24px;
+	font-size: 36px;
 }
 
 /* ~~~~~~~~ ~~~~~~~~ ~~~~~~~~ ~~~~~~~~ */
@@ -179,7 +179,7 @@
 	position: absolute;
 	left: 476px;
 	top: 295px;
-	width: 550px;
+	width: 700px;
 	height: 247px;
 	flex-direction: column;
 	/* background: pink; */
@@ -197,12 +197,14 @@
 	/* background: pink; */
 }
 
-#upNext {
+#stayTuned {
 	position: fixed;
 	flex-direction: column;
-	bottom: 20px;
-	font-size: 72px;
-	color: blue;
+	top: 56px;
+	font-size: 90px;
+	color: var(--LightGrey);
+	-webkit-text-stroke: var(--RichBlack) 3px;
+	animation: rotateJoke 12s ease-in-out 0s infinite alternate;
 }
 
 #upNext img {

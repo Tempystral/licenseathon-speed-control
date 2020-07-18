@@ -118,7 +118,7 @@ body {
 	font-family: 'Agency FB';
 	text-shadow: 3px 3px var(--RichBlack);
 }
-.timerContainer .timer  {
+.timerContainer  {
 	font-size: 96px;
 	letter-spacing: -2px;
 }
@@ -134,6 +134,10 @@ body {
 
 .timer_finished {
 	color: #3F88C5;
+}
+
+#stayTuned {
+	font-family: "Agency FB Bold"
 }
 
 /* Donation container */

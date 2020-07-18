@@ -37,13 +37,11 @@
         "width": 1920,
         "height": 1080
       },
-      
       {
         "file": "2-player_4-3.html",
         "width": 1920,
         "height": 1080
       },
-      
       {
         "file": "2-player_16-9.html",
         "width": 1920,
@@ -51,6 +49,11 @@
       },
       {
         "file": "3-player_special.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "co-op_16-9.html",
         "width": 1920,
         "height": 1080
       },
