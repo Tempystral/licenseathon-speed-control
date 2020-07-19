@@ -90,7 +90,7 @@
             "settings": {
                 "css": "",
                 "height": 1080,
-                "url": "speed.tempystral.live/bundles/licenseathon-speed-control/graphics/2-player_16-9.html",
+                "url": "https://speed.tempystral.live/bundles/licenseathon-speed-control/graphics/2-player_16-9.html",
                 "width": 1920
             },
             "sync": 0,
@@ -282,7 +282,7 @@
             "settings": {
                 "css": "",
                 "height": 1080,
-                "url": "speed.tempystral.live/bundles/licenseathon-speed-control/graphics/2-player_4-3.html",
+                "url": "https://speed.tempystral.live/bundles/licenseathon-speed-control/graphics/2-player_4-3.html",
                 "width": 1920
             },
             "sync": 0,
@@ -440,7 +440,7 @@
             "settings": {
                 "css": "",
                 "height": 1080,
-                "url": "speed.tempystral.live/bundles/licenseathon-speed-control/graphics/1-player_16-9.html",
+                "url": "https://speed.tempystral.live/bundles/licenseathon-speed-control/graphics/1-player_16-9.html",
                 "width": 1920
             },
             "sync": 0,
@@ -659,7 +659,7 @@
                 "fps_custom": false,
                 "height": 1080,
                 "reroute_audio": true,
-                "url": "speed.tempystral.live/bundles/licenseathon-speed-control/graphics/setup.html",
+                "url": "https://speed.tempystral.live/bundles/licenseathon-speed-control/graphics/setup.html",
                 "width": 1920
             },
             "sync": 0,
@@ -836,7 +836,7 @@
             "settings": {
                 "css": "",
                 "height": 1080,
-                "url": "speed.tempystral.live/bundles/licenseathon-speed-control/graphics/1-player_4-3.html",
+                "url": "https://speed.tempystral.live/bundles/licenseathon-speed-control/graphics/1-player_4-3.html",
                 "width": 1920
             },
             "sync": 0,
@@ -1028,7 +1028,7 @@
             "settings": {
                 "css": "",
                 "height": 1080,
-                "url": "speed.tempystral.live/bundles/licenseathon-speed-control/graphics/1-player_3-2.html",
+                "url": "https://speed.tempystral.live/bundles/licenseathon-speed-control/graphics/1-player_3-2.html",
                 "width": 1920
             },
             "sync": 0,
@@ -1215,7 +1215,7 @@
             "settings": {
                 "css": "",
                 "height": 1080,
-                "url": "speed.tempystral.live/bundles/licenseathon-speed-control/graphics/3-player_special.html",
+                "url": "https://speed.tempystral.live/bundles/licenseathon-speed-control/graphics/3-player_special.html",
                 "width": 1920
             },
             "sync": 0,
