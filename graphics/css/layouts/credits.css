@@ -1,0 +1,119 @@
+@font-face {
+	font-family: 'Agency FB Bold';
+	src: url('../fonts/agency-fb-bold.ttf') format('truetype');
+}
+
+/* Custom Colours */
+:root {
+	--RichBlack: #050505;
+	--Blue: #3F88C5;
+	--LightBlue: #97BDDA;
+	--LightGrey: #EEF1EF;
+	--Orange: #F18F01;
+	--Red: #A4243B;
+}
+
+#backgroundImage {
+	position: fixed;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background-image: url('../../img/layouts/background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1920px;
+	height: 1080px;
+}
+
+#logo {
+	position: fixed;
+	/* overflow: hidden; */
+	margin: 0;
+	padding: 0;
+	background-image: url('../../img/logo-wide.png');
+	background-repeat: no-repeat;
+  background-size: contain;
+  background-size: contain;
+	width: 800px;
+  height: 480px;
+  z-index: 10;
+
+	animation: moveOverlay 6s ease-in-out 0s infinite alternate;
+}
+
+#logo:after {
+  font-family: "Agency FB Bold";
+  font-size: 144px;
+  color: white;
+  text-shadow: 3px 3px 10px rgba(0,0,0,.8);
+  -webkit-text-stroke: black 1.5px;
+  padding-block-start: .5em;
+  content: "2020";
+}
+
+@keyframes moveOverlay {
+	from {
+		transform: translateY(-20px);
+	}
+
+	to {
+		transform: translateY(20px);
+	}
+}
+
+#creditsContainer {
+  position: fixed;
+  top: 100%;
+  max-width: 60%;
+  /* height: 1vh; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-size: 72px;
+  text-shadow: 3px 3px 10px rgba(0,0,0,.8);
+  /* -webkit-text-stroke: black 1.5px; */
+  /* transform: translateY(-100%); */
+  /* animation: rollCredits 5s ease-in-out 0s;
+  animation-fill-mode: forwards; */
+}
+
+#creditsContainer h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+
+#creditsContainer div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 1em;
+}
+
+#creditsContainer p {
+  width: 100%;
+  margin: 0;
+  margin-top: .25em;
+  margin-bottom: .25em;
+  text-align: center;
+}
+
+.thirds p {
+  width: 33% !important;
+}
+
+.halves p {
+  width: 50% !important;
+}
+
+@keyframes rollCredits {
+  from {
+		transform: translateY(0px);
+	}
+
+	to {
+		transform: translateY(-110%);
+	}
+}
