@@ -54,21 +54,38 @@
 	/* width: 50%; */
 }
 
+.timerContainer{
+	width: 210px;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 25px;
+	padding: 5px;
+}
+
 /* Timer stuff. */
 .timerContainer[timer-id="1"] {
 	position: absolute;
-	left: 500px;
-	top: 731px;
-	width: 430px;
-	height: 80px;
+	left: calc(50% - 465px);
+	top: 726px;
+
+	font-size: 54px;
 }
 
 .timerContainer[timer-id="2"] {
 	position: absolute;
-	left: 990px;
-	top: 731px;
-	width: 430px;
+	right: calc(50% - 465px);
+	top: 726px;
+	font-size: 54px;
+}
+
+#mainTimer{
+	position: absolute;
 	height: 80px;
+	width: 430px;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 25px;
+	padding: 5px;
+	top: 726px;
 }
 
 /* .timer {
