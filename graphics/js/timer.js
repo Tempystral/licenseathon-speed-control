@@ -25,19 +25,26 @@ $(() => {
 		const teams = runDataActiveRun.value.teams;
 		// If any team is finished...
 		if (Object.keys(finishTimes).length) {
-			for (let id in finishTimes) {
+			for (let id in finishTimes) { // Get the id for all ids in finishTimes
 				// Find the index of the finished team's ID
 				const index = teams.findIndex(x => x.id == id);
 				const time = finishTimes[id].time;
-				// Remove all other decoration classes from the affected timer and apply the timer_finished class
-				$(`.timerContainer[timer-id=${index + 1}] .timer`).html(time).toggleClass('timer_stopped timer_running timer_paused', false).toggleClass('timer_finished', true);
+				const state = finishTimes[id].state;
+				// Remove all other decoration classes from the affected timer and apply the timer_completed class
+				$(`.timerContainer[timer-id=${index + 1}] .timer`).html(time).toggleClass('timer_stopped timer_running timer_paused', false).toggleClass(`timer_${state}`, true);
+				$(`.timerContainer[timer-id=${index + 1}]`).slideDown("fast");
 			}
 		}
 		// Cleanup - finds IDs not in the list of finished teams and removes the timer_finished class
 		for (let i = 0; i < teams.length; i++){
 			if (!(teams[i].id in timer.value.teamFinishTimes)) {
-				$(`.timerContainer[timer-id=${i + 1}] .timer`).toggleClass('timer_finished', false);
+				$(`.timerContainer[timer-id=${i + 1}]`).slideUp({duration:"fast", done:removeFinishStyle(i)});
+				//$(`.timerContainer[timer-id=${i + 1}] .timer`).toggleClass('timer_completed timer_forfeit', false);
 			}
 		}
+	}
+
+	function removeFinishStyle(timerIndex){
+		$(`.timerContainer[timer-id=${timerIndex + 1}] .timer`).toggleClass('timer_completed timer_forfeit', false);
 	}
 })

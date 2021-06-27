@@ -132,8 +132,13 @@ body {
 	color: var(--Orange);
 }
 
+.timer_completed,
 .timer_finished {
 	color: #3F88C5;
+}
+
+.timer_forfeit {
+	color: #A4243B;
 }
 
 #stayTuned {
