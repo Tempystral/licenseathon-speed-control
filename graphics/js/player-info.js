@@ -48,7 +48,7 @@ $(() => {
 			const team = runData.teams[i];
 			const player = team.players[0];
 
-			runnerData[i] = { name: player.name, twitch: player.social.twitch };
+			runnerData[i] = { name: player.name, twitch: player.social.twitch, pronouns: player.pronouns };
 		}
 
 		showNames();
@@ -64,8 +64,9 @@ $(() => {
 			//const twitchLogo = $(`.twitchLogo`, playerCont);
 			//const nameLogo = $(`.nameLogo`, playerCont);
 			let nameStr = `${playerLogoStr} ${runnerData[i].name}`;
+			let pronounStr = `(${runnerData[i].pronouns})`;
 
-			animationSetField($(`.playerText`, playerCont), nameStr);
+			animationSetField($(`.playerText`, playerCont), nameStr + " " + pronounStr);
 			//animationFadeOutInElements(twitchLogo, nameLogo);
 		}
 		

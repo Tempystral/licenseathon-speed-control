@@ -42,6 +42,12 @@ $(() => {
 				//$(`.timerContainer[timer-id=${i + 1}] .timer`).toggleClass('timer_completed timer_forfeit', false);
 			}
 		}
+		var timerObjectsList = $(`.timerContainer[timer-id]`); // Select all timers with a timer-id
+		for (let i = 0; i < timerObjectsList.length; i++){
+			if ( !teams || i >= teams.length){
+				$(`.timerContainer[timer-id=${i + 1}]`).slideUp({duration:"fast", done:removeFinishStyle(i)});
+			}
+		}
 	}
 
 	function removeFinishStyle(timerIndex){

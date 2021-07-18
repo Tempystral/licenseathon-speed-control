@@ -81,6 +81,6 @@
 	width: 448px;
 	height: 120px;
 }
-.timerContainer[timer-id="1"] {
+.timerContainer {
 	font-size: 72px;
 }
