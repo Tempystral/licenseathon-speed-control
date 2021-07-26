@@ -64,9 +64,15 @@ $(() => {
 			//const twitchLogo = $(`.twitchLogo`, playerCont);
 			//const nameLogo = $(`.nameLogo`, playerCont);
 			let nameStr = `${playerLogoStr} ${runnerData[i].name}`;
-			let pronounStr = `(${runnerData[i].pronouns})`;
+			let pronounStr = runnerData[i].pronouns;
 
-			animationSetField($(`.playerText`, playerCont), nameStr + " " + pronounStr);
+			let displayString = nameStr
+
+			if (pronounStr){
+				displayString += ` (${pronounStr})`;
+			}
+			
+			animationSetField($(`.playerText`, playerCont), displayString);
 			//animationFadeOutInElements(twitchLogo, nameLogo);
 		}
 		
