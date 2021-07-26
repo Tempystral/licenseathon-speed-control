@@ -20,21 +20,33 @@ $(() => {
 	
 	// Sets information on the pages for the run.
 	function updateSceneFields(runData) {
-		gameTitle.html(runData.game);
-		gameCategory.html(runData.category);
-		gameSystem.html(runData.system);
-		gameEstimate.html(runData.estimate);
+		// gameTitle.html(runData.game);
+		// gameCategory.html(runData.category);
+		// gameSystem.html(runData.system);
+		// gameEstimate.html(runData.estimate);
+
+		animationSetField(gameTitle, runData.game);
+		animationSetField(gameCategory, runData.category || "<p></p>");
+		animationSetField(gameSystem, runData.system);
+		animationSetField(gameEstimate, runData.estimate);
 
 		let runnerData = setRunnerNames(runData);
-		if (runnerData.length > 1){
-			let runnerStr = runnerData.slice(0,-1).join(", ") + ", & " + runnerData[runnerData.length-1];
-			playerNames.html(runnerStr);
+		let runnerStr = "";
+		if (runnerData.length == 2){
+			runnerStr = runnerData.slice(0,-1).join(", ") + " & " + runnerData[runnerData.length-1];
 		}
-		else {playerNames.html(runnerData[0]);}
+		else if (runnerData.length > 2){
+			runnerStr = runnerData.slice(0,-1).join(", ") + ", & " + runnerData[runnerData.length-1];
+		}
+		else { runnerStr = runnerData[0]; }
+		animationSetField(playerNames, runnerStr);
 	}
 });
 
 function setRunnerNames(runData){
+	if (runData.teams.length == 0) {
+		return ["<p></p>"];
+	}
 	let runnerCount = runData.teams.length;
 	let runnerData = [];
 	for (let i = 0; i < runData.teams.length; i++) {

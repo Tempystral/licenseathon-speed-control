@@ -52,17 +52,30 @@ $(() => {
 
 	// Change to showing usernames.
 	function showImages(runnerID) {
-		console.log(runnerData);
-		let imgName = `img/runners/${runnerData[runnerID].twitch}.png`;
-		console.log(imgName);
+		//console.log(runnerData);
 
-		$(`#runnerImage`).css("background-image", `url("${imgName}")`);//animationSetField($(`#runnerImage`), "<img><img>");
-		//animationFadeOutInElements(twitchLogo, nameLogo);
-		let nextRunnerID = (runnerID + 1) % runnerCount;
-		rotationTO = setTimeout(function(){showImages(nextRunnerID);}, displayTwitchForOriginal);
+		let imgName = "";
+		let runnerNameText = "<p></p>";
+
+		if (runnerData[runnerID] != null){ // If there is a runner
+			imgName = `img/runners/${runnerData[runnerID].twitch}.png`.toLowerCase();
+			runnerNameText = runnerData[runnerID].name;
+		}
+		
+	
+		// Transition image and name
+		animationSetField($(`#runnerImage`),`<img src="${imgName}"/>`);
+		animationSetField($(`#runnerName`),`${runnerNameText}`);
+
+		// Flip through array of runners, if it exists
+		if (runnerData.length > 1){
+			let nextRunnerID = (runnerID + 1) % runnerCount;
+			rotationTO = setTimeout(function(){showImages(nextRunnerID);}, displayTwitchForOriginal);
+		}
 	}
 	
 	function getRunnerData(runData){
+		if (runData.teams == null) {return null;}
 		let runnerCount = runData.teams.length;
 		let runnerData = [];
 		for (let i = 0; i < runData.teams.length; i++) {
