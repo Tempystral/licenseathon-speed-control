@@ -6,6 +6,8 @@ def dlimage(name, img):
 	## Set up the image URL and filename
 	image_url = img.strip() #"https://cdn.pixabay.com/photo/2020/02/06/09/39/summer-4823612_960_720.jpg"
 	filename = name.strip() + "." + image_url.split("/")[-1].split(".")[-1]
+	if "70x70" in image_url:
+		filename.replace("70x70", "300x300")
 
 	# Open the url image, set stream to True, this will return the stream content.
 	r = requests.get(image_url, stream = True)
