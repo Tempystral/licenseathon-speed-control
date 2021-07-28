@@ -12,6 +12,7 @@
 		<!-- <script src="../bower_components/letteringjs/jquery.lettering.js"></script> -->
 		<script src="js/credits.js"></script>
 		<script src="js/animation.js"></script>
+		<script src="js/jquery.titlesequence.js"></script>
 	</head>
 	<body>
 		<!-- Background image -->
@@ -20,106 +21,140 @@
 		<!-- Logo -->
 		<div id="logo" class="flexContainer"></div>
 
-		<!-- Credits -->
-		<div id="creditsContainer">
-			<h1>Organizers</h1>
-			<div class="halves">
-				<p>Jak8</p>
-				<p>Tempystral</p>
+		<div id="titles"></div>
+
+		<div id="hidden">
+			<!-- Credits -->
+			<div class="creditsContainer" id="organizers">
+				<h1>Organizers</h1>
+				<div class="halves">
+					<p>Jak8</p>
+					<p>Tempystral</p>
+				</div>
 			</div>
-			<h1>Restreamers</h1>
-			<div class="halves">
-				<p>Gliitchwiitch</p>
-				<p>Makkebakke</p>
-				<p>TempestMask1000</p>
-				<p>Tempystral</p>
+			<div class="creditsContainer" id="restreamers">
+				<h1>Restreamers</h1>
+				<div class="halves">
+					<p>Dillon</p>
+					<p>Earllgray</p>
+					<p>FlannelKat</p>
+					<p>Nicnacnic</p>
+					<p>Tempystral</p>
+				</div>
 			</div>
-			<h1>Moderators</h1>
-			<div class="halves">
-				<p>Gliitchwiitch</p>
-				<p>Jak8</p>
-				<p>PikaNiko</p>
-				<p>Tempystral</p>
+			<div class="creditsContainer" id="moderators">
+				<h1>Moderators</h1>
+				<div class="halves">
+					<p>Earllgray</p>
+					<p>Gaming Guy</p>
+					<p>FlannelKat</p>
+					<p>Jak8</p>
+					<p>PikaNiko</p>
+					<p>Tempystral</p>
+				</div>
 			</div>
-			<h1>Scheduling</h1>
-			<div class="halves">
-				<p>Gliitchwiitch</p>
-				<p>Kuno Demetries</p>
-				<p>StarrlightSims</p>
-				<p>Tempystral</p>
+			<div class="creditsContainer" id="scheduling">
+				<h1>Scheduling</h1>
+				<div class="halves">
+					<p>Earllgray</p>
+					<p>Gaming Guy</p>
+					<p>Garsh</p>
+					<p>Kuno Demetries</p>
+					<p>Mageius</p>
+					<p>Ozmourn</p>
+					<p>Tempystral</p>
+					<p>TempestMask1000</p>
+				</div>
 			</div>
-			<h1>Runner Prep</h1>
-			<div class="halves">
-				<p>Gliitchwiitch</p>
-				<p>Kuno Demetries</p>
-				<p>TempestMask1000</p>
-				<p>Tempystral</p>
+			<div class="creditsContainer" id="prep">
+				<h1>Runner Prep</h1>
+				<div class="halves">
+					<p>Dillon</p>
+					<p>FlannelKat</p>
+					<p>Garsh</p>
+					<p>Kuno Demetries</p>
+					<p>Nicnacnic</p>
+					<p>Ozmourn</p>
+					<p>Tempystral</p>
+				</div>
 			</div>
-			<h1>Social Media</h1>
-			<div class="halves">
-				<p>Crazy_Sunshine</p>
+			<div class="creditsContainer" id="socialmedia">
+				<h1>Social Media</h1>
+				<div class="">
+					<p>Crazy_Sunshine</p>
+					<p>Cassasaur</p>
+				</div>
 			</div>
-			<h1>Runners</h1>
-			<div class="">
-				<p>Admiral</p>
-				<p>Amy (she/her)</p>
-				<p>AtomicCaleb (he/him)</p>
-				<p>CardsOfTheHeart</p>
-				<p>CarterKirby (he/him)</p>
-				<p>chris_smm (he/him)</p>
-				<p>christhefast222 (he/him)</p>
-				<p>dijonketchup (she/her)</p>
-				<p>Drumboardist</p>
-				<p>earllgray (they/them)</p>
-				<p>FullyAutomato</p>
-				<p>Gibstack (he/him)</p>
-				<p>GliitchWiitch (she/her)</p>
-				<p>TegoSamego2020</p>
-				<p>jai_heart (he/him)</p>
-				<p>JXjunk (he/him)</p>
-				<p>KateLibC (she/her)</p>
-				<p>Khloë (she/her)</p>
-				<p>Makkebakke (he/him)</p>
-				<p>pmcTRILOGY (he/him)</p>
-				<p>rythin (she/her)</p>
-				<p>Shtrudel</p>
-				<p>Sid3300</p>
-				<p>Slyfincleton</p>
-				<p>Streetwize (he/him)</p>
-				<p>Stuser (she/her)</p>
-				<p>Tadda (he/him)</p>
-				<p>TailsFiraga</p>
-				<p>Tayman (he/him)</p>
-				<p>Texan Red Wolf (he/him)</p>
-				<p>thegoodjakeward (he/him)</p>
-				<p>Thermalsquare</p>
-				<p>Tytygigas (they/them)</p>
-				<p>Wazzip (he/him)</p>
-				<p>Wohingenau (he/him)</p>
-				<p>Xlebomatb</p>
-				<p>ZirowoTheHirowo</p>
+			<div class="creditsContainer" id="runners">
+				<h1>Runners</h1>
+				<div class="">
+					<p>axington123</p>
+					<p>Baconman12 (He/Him)</p>
+					<p>CosmykTheDolfyn (He/Him)</p>
+					<p>Drumboardist (He/Him)</p>
+					<p>DududeDude (He/Him)</p>
+					<p>earllgray</p>
+					<p>ellieceraptor (She/Her)</p>
+					<p>Erix33</p>
+					<p>Failracer (He/Him)</p>
+					<p>FlannelKay (She/Her)</p>
+					<p>izzyacedolphin (She/Her)</p>
+					<p>JamieJo1</p>
+					<p>juh0rse (He/Him)</p>
+					<p>kaezee781</p>
+					<p>Kefka14 (He/Him)</p>
+					<p>killingpepsi (He/They)</p>
+					<p>kyoslilmonster (He/Him)</p>
+					<p>LRock617 (He/Him)</p>
+					<p>mageius1 (He/They)</p>
+					<p>mechalink (He/Any)</p>
+					<p>Natetheman223</p>
+					<p>Neetsel (He/They)</p>
+					<p>noots</p>
+					<p>orionytp (He/Him)</p>
+					<p>passere</p>
+					<p>Paulister (He/They)</p>
+					<p>puffjak8 (He/Him)</p>
+					<p>rayreviewer (He/Him)</p>
+					<p>RebelRose42</p>
+					<p>Rinbu (He/Him)</p>
+					<p>Ritzblues</p>
+					<p>sharif (He/Him)</p>
+					<p>Shtrudel</p>
+					<p>Slyfincleton (He/Him)</p>
+					<p>stevetvonline</p>
+					<p>thebpg13</p>
+					<p>TheMahr</p>
+					<p>toopercentmilk (He/Him)</p>
+					<p>toxicroak_gaming (He/Him)</p>
+					<p>XleboMatb</p>
+					<p>xoneris (He/Him)</p>
+				</div>
 			</div>
-			<h1>Commentators</h1>
-			<div class="">
-				<p>Adamslow</p>
-				<p>Bbforky</p>
-				<p>DevolitionDerby</p>
-				<p>Gliitchwiitch (she/her)</p>
-				<p>Jake</p>
-				<p>RoboticRocketeer</p>
-				<p>ShadowEh</p>
-				<p>Shtrudel</p>
+				
+				<!--<h1>Commentators</h1>
+				<div class="">
+					<p>Adamslow</p>
+					<p>Bbforky</p>
+					<p>DevolitionDerby</p>
+					<p>FlannelKat (She/Her)</p>
+					<p>Jake</p>
+					<p>RoboticRocketeer</p>
+					<p>ShadowEh</p>
+					<p>Shtrudel</p>
+				</div>
+			
+				<h1>Special Thanks</h1>
+				<div class="">
+					<p>SionNX</p>
+					<p>Dreamseeker</p>
+					<p>Xander_721</p>
+					<p>GlitchPHD</p>
+				</div>-->
+			<div class="creditsContainer" id="finaltext">
+				<h1>And thank you for watching!</h1>
+				<h1>See you next year!</h1>
 			</div>
-			<h1>Special Thanks</h1>
-			<div class="">
-				<p>SionNX</p>
-				<p>Dreamseeker</p>
-				<p>Xander_721</p>
-				<p>GlitchPHD</p>
-			</div>
-			<h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1><h1>&nbsp;</h1>
-			<h1>And thank you for watching!</h1>
-			<h1>See you next year!</h1>
 		</div>
 	</body>
 </html>

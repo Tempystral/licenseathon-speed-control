@@ -48,7 +48,7 @@
   text-shadow: 3px 3px 10px rgba(0,0,0,.8);
   -webkit-text-stroke: black 1.5px;
   padding-block-start: .5em;
-  content: "2020";
+  content: "2021";
 }
 
 @keyframes moveOverlay {
@@ -61,9 +61,39 @@
 	}
 }
 
-#creditsContainer {
+#titles {
+	/* Removes the page's margin/padding and makes it fill the whole browser. */
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	/* Turns the whole page into a flex box, so we can position the text horizontally/vertically. */
+	display: flex;
+	/* Options for settings below: flex-start (top/left), center, flex-end (bottom/right). */
+	align-items: center;
+	/* Aligns vertically centre. */
+	justify-content: center;
+	/* Aligns horizontally centre. */
+
+	/* Change the default text font, size and colour. */
+	font-family: 'Agency FB';
+	color: white;
+	font-size: 20px;
+}
+
+#hidden {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.creditsContainer {
   position: fixed;
-  top: 100%;
+  /* top: 100%; */
   max-width: 60%;
   /* height: 1vh; */
   overflow: hidden;
@@ -77,14 +107,14 @@
   animation-fill-mode: forwards; */
 }
 
-#creditsContainer h1 {
+.creditsContainer h1 {
   display: flex;
   justify-content: center;
   text-align: center;
   margin: 0;
 }
 
-#creditsContainer div {
+.creditsContainer div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -92,7 +122,7 @@
   margin-bottom: 1em;
 }
 
-#creditsContainer p {
+.creditsContainer p {
   width: 100%;
   margin: 0;
   margin-top: .25em;
