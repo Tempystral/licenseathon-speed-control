@@ -38,6 +38,21 @@
         "height": 1080
       },
       {
+        "file": "1-player_4-3_webcam.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "1-player_16-9_webcam.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "1-player_3-2_webcam.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
         "file": "2-player_4-3.html",
         "width": 1920,
         "height": 1080
