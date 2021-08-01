@@ -146,9 +146,10 @@ $(() => {
                 id: 'runners',
                 class: "creditsContainer",
                 css: { top: '100%' },
-                animate: { top: '-5500px' },
-                duration: 35000,
-                easing: 'linear'
+                animate: { top: '-6900px' },
+                duration: 45000,
+                easing: 'linear',
+                pause: 2000
             },
 
             {
