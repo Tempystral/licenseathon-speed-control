@@ -33,7 +33,7 @@ body {
 	/* Options for settings below: flex-start (top/left), center, flex-end (bottom/right). */
 	align-items: center;
 	/* Aligns vertically centre. */
-	justify-content: center;
+	justify-content: space-around;
 	/* Aligns horizontally centre. */
 
 	/* Change the default text font, size and colour. */

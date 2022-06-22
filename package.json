@@ -81,6 +81,11 @@
         "file": "splash-screen.html",
         "width": 1920,
         "height": 1080
+      },
+      {
+        "file": "reveal.html",
+        "width": 1920,
+        "height": 1080
       }
     ]
   }

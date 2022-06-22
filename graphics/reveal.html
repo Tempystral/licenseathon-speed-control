@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html data-sceneid="1p">
+	<head>
+		<meta charset="UTF-8">
+		
+		<!-- CSS -->
+		<link href="css/common.css" rel="stylesheet"/>
+		<link href="css/layouts/reveal.css" rel="stylesheet"/>
+		
+		<!-- JavaScript -->
+		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<!-- <script src="../bower_components/letteringjs/jquery.lettering.js"></script> -->
+		<script src="js/fittext.js"></script>
+		<script src="js/animation.js"></script>
+		<script src="js/setup-info.js"></script>
+		<!--<script src="js/reveal-images.js"></script>-->
+		<script src="js/player-images.js"></script>
+		<script src="js/timer.js"></script>
+	</head>
+	<body>
+		<!-- Background image -->
+		<div id="backgroundImage"></div>
+
+		<!--<div id="stayTuned" class="flexContainer">
+			<div>Stay Tuned...</div>
+			 <img src="img/logo-wide.png"> 
+		</div>-->
+		
+		<div class="flexContainer" style="flex-direction: row; width: 100%; justify-content: space-between;">
+			<div id="license">
+				<div id="runnerImageContainer" class="flexContainer" style="flex-grow: 1">
+					<div id="runnerImage"></div>
+					<!-- <div id="runnerImage2"></div>
+					<div id="runnerImage3"></div>
+					<div id="runnerImage4"></div> -->
+					<div id="runnerName"></div>
+				</div>
+				<div id="runnerInfoContainer" class="flexContainer">
+					<div player-id="1" class="playerContainer flexContainer">
+						<div class="nameContainer flexContainer">
+							<div class="playerText"><!-- Player Name --></div>
+						</div>
+					</div>
+					<div id="runInfoContainer">
+						<div id="gameTitle" class="flexContainer"></div>
+						<div id="categoryContainer" class="flexContainer">
+							<div id="gameCategory"><!-- Game Category --></div>
+						</div>
+					</div>
+				</div>
+				<div id="estimateContainer">
+					<div id="gameEstimate" class="timer"><!-- Game Estimate --></div>
+				</div>
+			</div>
+			<div id="gameImage"></div>
+		</div>
+		<!-- <script src="js/typing.js"></script> -->
+	</body>
+</html>

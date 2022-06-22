@@ -5,7 +5,7 @@ $(() => {
 	var speedcontrolBundle = 'nodecg-speedcontrol';
 	
 	let displayNameForOriginal = 45000; // 45 seconds
-	let displayTwitchForOriginal = 15000; // 15 seconds
+	let displayTwitchForOriginal = 10000; // 10 seconds
 	let runnerCount = 0;
 	let rotationTO;
 	let runDataActiveRunCache = {};
@@ -43,6 +43,7 @@ $(() => {
 		for (let i = 0; i < runData.teams.length; i++) {
 			const team = runData.teams[i];
 			const player = team.players[0];
+			console.log(player.social.twitch)
 
 			runnerData[i] = { name: player.name, twitch: player.social.twitch };
 		}

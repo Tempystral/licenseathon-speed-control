@@ -2,13 +2,13 @@
 $(() => {
 	// The bundle name where all the run information is pulled from.
 	var speedcontrolBundle = 'nodecg-speedcontrol';
-	
+
 	// JQuery selectors
 	var gameTitle = $('#gameTitle');
 	var gameCategory = $('#gameCategory');
-	var gameSystem = $('#gameSystem'); 
+	var gameSystem = $('#gameSystem');
 	var gameEstimate = $('#gameEstimate');
-	
+
 	// This is where the information is received for the run we want to display.
 	// The "change" event is triggered when the current run is changed.
 	var runDataActiveRun = nodecg.Replicant('runDataActiveRun', speedcontrolBundle);
@@ -16,7 +16,7 @@ $(() => {
 		if (newVal)
 			updateSceneFields(newVal);
 	});
-	
+
 	// Sets information on the pages for the run.
 	function updateSceneFields(runData) {
 		let title = `${runData.game}`;
@@ -27,7 +27,7 @@ $(() => {
 			fontSize += Math.min((gameTitle.height() - 57) / 67 * 6, 6);
 		}
 		gameTitle.css('font-size', `${fontSize}px`);
-		
+
 		gameTitle.html(runData.game);
 
 		gameCategory.html(runData.category);
@@ -40,8 +40,8 @@ $(() => {
 
 var flexFont = function () {
 	var divs = document.getElementsByClassName("flexFont");
-	for(var i = 0; i < divs.length; i++) {
-			var relFontsize = divs[i].offsetWidth*0.05;
-			divs[i].style.fontSize = relFontsize+'px';
+	for (var i = 0; i < divs.length; i++) {
+		var relFontsize = divs[i].offsetWidth * 0.05;
+		divs[i].style.fontSize = relFontsize + 'px';
 	}
 };

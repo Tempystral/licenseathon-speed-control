@@ -9,6 +9,7 @@ $(() => {
 	var gameSystem = $('#gameSystem'); 
 	var gameEstimate = $('#gameEstimate');
 	var playerNames = $('.playerText'); // Array
+	var gameImage = $(`#gameImage`);
 	
 	// This is where the information is received for the run we want to display.
 	// The "change" event is triggered when the current run is changed.
@@ -40,6 +41,12 @@ $(() => {
 		}
 		else { runnerStr = runnerData[0]; }
 		animationSetField(playerNames, runnerStr);
+
+		const imgName = `img/games/${runData.game}.png`.toLowerCase().replace(":","");
+		if (gameImage) {
+			animationSetField(gameImage, `<img src="${imgName}"/>`)
+		}
+		
 	}
 });
 
