@@ -1,0 +1,83 @@
+#backgroundImage {
+	position: fixed;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	background-image: url('../../img/layouts/DS\ Solo.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1920px;
+	height: 1080px;
+}
+
+/* Player information stuff. */
+.playerContainer .nameContainer {
+	font-size: 48px;
+}
+
+/* .playerContainer[player-id="1"] {
+	position: absolute;
+	left: 1458px;
+	top: 731px;
+	width: 430px;
+	height: 120px;
+} */
+
+.playerContainer[player-id="1"] {
+	position: absolute;
+	height: 80px;
+	width: 430px;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 25px;
+	padding: 5px;
+	top: 726px;
+}
+
+/* Run information stuff. */
+#runInfoContainer {
+	position: absolute;
+	left: 745px;
+	top: 833px;
+	width: 430px;
+	height: 215px;
+}
+
+#gameTitle {
+	width: 100%;
+}
+
+#categoryContainer {
+	font-size: 30px;
+	width: 100%;
+}
+
+#estimateContainer {
+	font-size: 24px;
+	/* width: 50%; */
+}
+
+.timerContainer{
+	width: 210px;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 25px;
+	padding: 5px;
+}
+
+/* Timer stuff. */
+
+#mainTimer{
+	position: absolute;
+	height: 120px;
+	width: 430px;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 25px;
+	padding: 5px;
+	bottom: 20px;
+	right: 157px;
+}
+
+/* .timer {
+	font-size: 54px;
+	-webkit-text-stroke: 2px black;
+} */
