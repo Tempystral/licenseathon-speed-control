@@ -67,14 +67,14 @@
 	position: absolute;
 	left: calc(50% - 465px);
 	top: 693px;
-	font-size: 54px;
+	font-size: 44px;
 }
 
 .timerContainer[timer-id="2"] {
 	position: absolute;
 	right: calc(50% - 465px);
 	top: 693px;
-	font-size: 54px;
+	font-size: 44px;
 }
 
 #mainTimer{

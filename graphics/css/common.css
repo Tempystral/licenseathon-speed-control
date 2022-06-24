@@ -9,6 +9,11 @@
 	src: url('../fonts/agency-fb-bold.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: 'Fast Hand';
+	src: url('../fonts/FastHand-lgBMV.ttf') format('truetype');
+}
+
 /* Custom Colours */
 :root {
 	--RichBlack: #050505;
@@ -17,6 +22,7 @@
 	--LightGrey: #EEF1EF;
 	--Orange: #F18F01;
 	--Red: #A4243B;
+	--Gradient: 
 }
 
 html,
@@ -101,6 +107,12 @@ body {
 	font-family: "Agency FB Bold";
 	font-size: 48px;
 	color: var(--Orange);
+	background: linear-gradient(15deg, orange, darkmagenta 120%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: none;
+	filter: drop-shadow(2px 2px black)
+	
 	
 }
 #gameEstimate {
@@ -115,21 +127,24 @@ body {
 
 /* Different colours for each state the timer can be in. */
 .timer {
-	font-family: 'Agency FB';
+	font-family: 'Fast Hand';
 	text-shadow: 3px 3px var(--RichBlack);
+	
 }
 .timerContainer  {
-	font-size: 96px;
+	font-size: 82px;
 	letter-spacing: -2px;
 }
 
-.timer_running {
-	color: var(--Orange);
-}
-
 .timer_paused,
-.timer_stopped {
-	color: var(--Orange);
+.timer_stopped,
+.timer_running {
+	/* color: var(--Orange); */
+	background: linear-gradient(15deg, orange, darkmagenta 120%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: none;
+	filter: drop-shadow(1px -1px lavender) drop-shadow(2px 2px black)
 }
 
 .timer_completed,

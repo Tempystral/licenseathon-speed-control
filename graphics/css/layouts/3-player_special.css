@@ -82,7 +82,7 @@
 	top: 632px;
 	width: 222px;
 	height: 80px;
-	font-size: 64px;
+	font-size: 48px;
 }
 
 .timerContainer[timer-id="2"] {
@@ -91,7 +91,7 @@
 	top: 632px;
 	width: 222px;
 	height: 80px;
-	font-size: 64px;
+	font-size: 48px;
 }
 
 .timerContainer[timer-id="3"] {
@@ -100,7 +100,7 @@
 	top: 632px;
 	width: 222px;
 	height: 80px;
-	font-size: 64px;
+	font-size: 48px;
 }
 
 #mainTimer{
