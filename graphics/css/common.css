@@ -143,6 +143,7 @@ body {
 	/* color: var(--Orange); */
 	background: linear-gradient(15deg, orange, darkmagenta 120%);
 	background-clip: text;
+	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	text-shadow: none;
 	filter: drop-shadow(1px -1px lavender) drop-shadow(2px 2px black)
