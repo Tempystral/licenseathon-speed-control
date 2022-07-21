@@ -29,6 +29,16 @@ $(() => {
 	
 	// Sets information on the pages for the run.
 	function updateSceneFields(runData) {
+		
+		runnerCount = runData.teams.length;
+		runnerData = [];
+		for (let i = 0; i < runData.teams.length; i++) {
+			const team = runData.teams[i];
+			const player = team.players[0];
+
+			runnerData[i] = { name: player.name, twitch: player.social.twitch, pronouns: player.pronouns };
+		}
+		
 		for (let i = 0; i <= runnerCount; i++) {
 			const playerCont = $(`.playerContainer[player-id="${i + 1}"]`);
 
@@ -40,15 +50,6 @@ $(() => {
 			animationFadeOutElement($(`.playerText`, playerCont));
 			//animationFadeOutElement(twitchLogo);
 			//animationFadeOutElement(nameLogo);
-		}
-
-		runnerCount = runData.teams.length;
-		runnerData = [];
-		for (let i = 0; i < runData.teams.length; i++) {
-			const team = runData.teams[i];
-			const player = team.players[0];
-
-			runnerData[i] = { name: player.name, twitch: player.social.twitch, pronouns: player.pronouns };
 		}
 
 		showNames();
