@@ -120,6 +120,10 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-bottom: 1em;
+	background-color: rgba(0, 0, 0, .8);
+	border-radius: 20px;
+	border: solid;
+	border-color: transparent;
 }
 
 .creditsContainer p {

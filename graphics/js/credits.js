@@ -123,23 +123,23 @@ $(() => {
             },
             { delete: '#prep', },
 
-            {
-                content: $("#socialmedia").html(),
-                id: 'socialmedia',
-                class: "creditsContainer",
-                css: { opacity: 0 },
-                animate: { opacity: 1 },
-                duration: fadeSpeed,
-                pause: 5000,
-                easing: 'linear'
-            },
-            {
-                selector: "#socialmedia",
-                animate: { opacity: 0 },
-                duration: fadeSpeed,
-                easing: 'linear'
-            },
-            { delete: '#socialmedia', },
+            // {
+            //     content: $("#socialmedia").html(),
+            //     id: 'socialmedia',
+            //     class: "creditsContainer",
+            //     css: { opacity: 0 },
+            //     animate: { opacity: 1 },
+            //     duration: fadeSpeed,
+            //     pause: 5000,
+            //     easing: 'linear'
+            // },
+            // {
+            //     selector: "#socialmedia",
+            //     animate: { opacity: 0 },
+            //     duration: fadeSpeed,
+            //     easing: 'linear'
+            // },
+            // { delete: '#socialmedia', },
 
             {
                 content: $("#runners").html(),
